@@ -164,10 +164,11 @@ function PessoaIncluirAlterarController(
 
         objetoDados.enderecos = listaEndereco;
         if (vm.perfil !== null){
-
+            debugger
             vm.isNovoPerfil = true;
             
             angular.forEach(objetoDados.perfils, function (value, key) {
+                debugger
                 if (value.id === vm.perfil.id) {
                     vm.isNovoPerfil = false;
                 }

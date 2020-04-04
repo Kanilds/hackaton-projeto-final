@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">2.42% </span>
+        <span class="strong">2.38% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/124</span>
+        <span class='fraction'>3/126</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/31</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">2.42% </span>
+        <span class="strong">2.38% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/124</span>
+        <span class='fraction'>3/126</span>
       </div>
     </div>
   </div>
@@ -348,26 +348,7 @@
 303
 304
 305
-306
-307
-308
-309
-310
-311
-312
-313
-314
-315
-316
-317
-318
-319
-320
-321
-322
-323
-324
-325</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+306</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -438,8 +419,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -521,7 +500,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -536,12 +514,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -642,23 +621,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -762,8 +724,6 @@ PessoaIncluirAlterarController.$inject = [
 <span class="fstat-no" title="function not covered" >                            function (pessoaRetorno) {</span>
 <span class="cstat-no" title="statement not covered" >                                if (pessoaRetorno !== undefined) {</span>
 <span class="cstat-no" title="statement not covered" >                                    vm.pessoa = pessoaRetorno;</span>
-                                    //vm.pessoa.dataNascimento = vm.formataDataTela(pessoaRetorno.dataNascimento);
-&nbsp;
 <span class="cstat-no" title="statement not covered" >                                    vm.perfil = vm.pessoa.perfils[0];</span>
                                 }
                             }
@@ -845,7 +805,6 @@ PessoaIncluirAlterarController.$inject = [
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    vm.incluir = <span class="fstat-no" title="function not covered" >function () {</span></span>
         
-       // vm.pessoa.dataNascimento = vm.formataDataJava(vm.pessoa.dataNascimento);
 <span class="cstat-no" title="statement not covered" >        vm.pessoa.imagem = document.getElementById("imagemPessoa").getAttribute("src");</span>
 <span class="cstat-no" title="statement not covered" >        document.getElementById("imagemPessoa").src = vm.pessoa.imagem;</span>
         
@@ -860,10 +819,11 @@ PessoaIncluirAlterarController.$inject = [
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        objetoDados.enderecos = listaEndereco;</span>
 <span class="cstat-no" title="statement not covered" >        if (vm.perfil !== null){</span>
-&nbsp;
+<span class="cstat-no" title="statement not covered" >            debugger</span>
 <span class="cstat-no" title="statement not covered" >            vm.isNovoPerfil = true;</span>
             
 <span class="cstat-no" title="statement not covered" >            angular.forEach(objetoDados.perfils, <span class="fstat-no" title="function not covered" >function (value, key) {</span></span>
+<span class="cstat-no" title="statement not covered" >                debugger</span>
 <span class="cstat-no" title="statement not covered" >                if (value.id === vm.perfil.id) {</span>
 <span class="cstat-no" title="statement not covered" >                    vm.isNovoPerfil = false;</span>
                 }
@@ -968,23 +928,6 @@ PessoaIncluirAlterarController.$inject = [
 <span class="cstat-no" title="statement not covered" >        return deferred.promise;</span>
     }
 &nbsp;
-    /**METODOS AUXILIARES */
-    /*vm.formataDataJava = function (data) {
-        var dia = data.slice(0, 2);
-        var mes = data.slice(2, 4);
-        var ano = data.slice(4, 8);
-&nbsp;
-        return ano + "-" + mes + "-" + dia;
-    };*/
-&nbsp;
-    /*vm.formataDataTela = function (data) {
-        var ano = data.slice(0, 4);
-        var mes = data.slice(5, 7);
-        var dia = data.slice(8, 10);
-&nbsp;
-        return dia + mes + ano;
-    };*/
-&nbsp;
 <span class="cstat-no" title="statement not covered" >    vm.listaUF = [</span>
         { "id": "RO", "desc": "RO" },
         { "id": "AC", "desc": "AC" },
@@ -1021,7 +964,7 @@ PessoaIncluirAlterarController.$inject = [
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 04 2020 04:06:20 GMT-0300 (GMT-03:00)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Apr 04 2020 18:16:10 GMT-0300 (GMT-03:00)
 </div>
 </div>
 <script src="../../prettify.js"></script>

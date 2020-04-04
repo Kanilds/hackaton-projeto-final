@@ -2,7 +2,6 @@ package com.stefanini.resource;
 
 import com.stefanini.dto.ErroDto;
 import com.stefanini.exception.NegocioException;
-import com.stefanini.model.Perfil;
 import com.stefanini.model.Pessoa;
 import com.stefanini.servico.PessoaServico;
 
@@ -55,15 +54,9 @@ public class PessoaResource {
      */
     @POST
     public Response adicionarPessoa(@Valid Pessoa pessoa) {
-        if (pessoa.getPerfils() == null) {
-            Perfil perfil = (Perfil) pessoaServico.getList().get();
-        }
-
-
-        if (pessoaServico.validarPessoa(pessoa)) {
-
+        if (!pessoaServico.validaSeExisteEmailCadastrado(pessoa))
             return Response.ok(pessoaServico.salvar(pessoa)).build();
-        }
+
         return Response.status(Status.METHOD_NOT_ALLOWED).entity(new ErroDto("email", "email já existe", pessoa.getEmail())).build();
     }
 
@@ -73,7 +66,7 @@ public class PessoaResource {
      */
     @PUT
     public Response atualizarPessoa(@Valid Pessoa pessoa) {
-        if (pessoaServico.validarPessoa(pessoa)) {
+        if (pessoaServico.validaSeExisteEmailCadastrado(pessoa)) {
             return Response.ok(pessoaServico.atualizar(pessoa)).build();
         }
         return Response.status(Status.METHOD_NOT_ALLOWED).entity(new ErroDto("email", "email já existe", pessoa.getEmail())).build();

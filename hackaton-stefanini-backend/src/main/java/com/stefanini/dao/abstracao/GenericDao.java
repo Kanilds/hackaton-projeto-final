@@ -54,6 +54,9 @@ public abstract class GenericDao<T, I extends Serializable> implements IGenericD
 		return entity;
 	}
 
+	public void daoFlush() {
+		entityManager.flush();
+	}
 	
 	/**
 	 * Sempre que for executar uma DML é necessario abrir uma transacao e fecha-la, pois senão a operacao não será comitada

@@ -69,8 +69,6 @@ function PessoaIncluirAlterarController(
                             function (pessoaRetorno) {
                                 if (pessoaRetorno !== undefined) {
                                     vm.pessoa = pessoaRetorno;
-                                    //vm.pessoa.dataNascimento = vm.formataDataTela(pessoaRetorno.dataNascimento);
-
                                     vm.perfil = vm.pessoa.perfils[0];
                                 }
                             }
@@ -152,7 +150,6 @@ function PessoaIncluirAlterarController(
 
     vm.incluir = function () {
         
-       // vm.pessoa.dataNascimento = vm.formataDataJava(vm.pessoa.dataNascimento);
         vm.pessoa.imagem = document.getElementById("imagemPessoa").getAttribute("src");
         document.getElementById("imagemPessoa").src = vm.pessoa.imagem;
         
@@ -167,10 +164,11 @@ function PessoaIncluirAlterarController(
 
         objetoDados.enderecos = listaEndereco;
         if (vm.perfil !== null){
-
+            debugger
             vm.isNovoPerfil = true;
             
             angular.forEach(objetoDados.perfils, function (value, key) {
+                debugger
                 if (value.id === vm.perfil.id) {
                     vm.isNovoPerfil = false;
                 }
@@ -274,23 +272,6 @@ function PessoaIncluirAlterarController(
         );
         return deferred.promise;
     }
-
-    /**METODOS AUXILIARES */
-    /*vm.formataDataJava = function (data) {
-        var dia = data.slice(0, 2);
-        var mes = data.slice(2, 4);
-        var ano = data.slice(4, 8);
-
-        return ano + "-" + mes + "-" + dia;
-    };*/
-
-    /*vm.formataDataTela = function (data) {
-        var ano = data.slice(0, 4);
-        var mes = data.slice(5, 7);
-        var dia = data.slice(8, 10);
-
-        return dia + mes + ano;
-    };*/
 
     vm.listaUF = [
         { "id": "RO", "desc": "RO" },
