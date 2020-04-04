@@ -1,0 +1,34 @@
+<div>  
+  <form>
+      <div class="mx-auto" style="width: 100px;">
+        <h5 class="modal-title">Endereço</h5>
+      </div>
+      
+      <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" class="form-control" id="cep" ng-model="vm.enderecoModal.cep" maxlength="8" ng-blur="vm.buscaCep()" />
+      </div>
+      <div class="form-group">
+        <label for="uf">UF:</label>
+        <input type="text" class="form-control" id="uf" ng-model="vm.enderecoModal.uf" max="2" disabled/> 
+      </div>
+    
+      <div class="form-group">
+        <label for="localidade">Cidade:</label>
+        <input type="text" class="form-control" id="localidade" ng-model="vm.enderecoModal.localidade" disabled/>
+      </div>
+      <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" class="form-control" id="bairro" ng-model="vm.enderecoModal.bairro" disabled/>
+      </div>
+      <div class="form-group">
+        <label for="logradouro">Logradouro:</label>
+         <input type="text" class="form-control" id="logradouro" ng-model="vm.enderecoModal.logradouro" disabled/>
+      </div>
+      <div class="form-group">
+        <label for="complemento">Complemento:</label>
+        <input type="text" class="form-control" id="complemento" ng-model="vm.enderecoModal.complemento"
+          placeholder="Digite o Complemento"/>
+      </div>
+  </form>
+</div>
