@@ -14,8 +14,6 @@
           <th scope="col">Id</th>
           <th scope="col">Nome</th>
           <th scope="col">Descrição</th>
-          <th scope="col">Data de inclusão</th>
-          <th scope="col">Data de Alteração</th>
           <th scope="col">Editar</th>
           <th scope="col">Excluir</th>
         </tr>
@@ -25,8 +23,6 @@
           <td>{{perfil.id}}</td>
           <td>{{perfil.nome}}</td>
           <td>{{perfil.descricao}}</td>
-          <td>{{vm.formataDataTela(perfil.dataHoraInclusao)}}</td>
-          <td>{{perfil.dataHoraAlteracao  ? vm.formataDataTela(perfil.dataHoraAlteracao) : " - " }}</td>
           <td>
             <img src="../../../app/imagens/bootstrap-icons/icons/pencil.svg" style="cursor: pointer;" alt="" width="25"
               height="25" title="Editar" ng-click="vm.editar(perfil.id)" />
@@ -41,18 +37,4 @@
       </tbody>
     </table>
   </div>
-  <nav class="row" style="float: right; padding-right: 20px;">
-    <ul class="pagination">
-      <li ng-class="{'page-item': true, 'disabledDiv': vm.currentPage === 1}">
-        <a class="page-link" ng-click="vm.retrocederPaginanacao()">Anterior</a>
-      </li>
-      <li ng-class="{'page-item': true, 'disabledDiv': vm.currentPage === $index + 1}"
-        ng-repeat="i in vm.qdePaginacao track by $index">
-        <a class="page-link" ng-click="vm.atualizarPaginanacao($index)">{{$index + 1}}</a>
-      </li>
-      <li ng-class="{'page-item': true, 'disabledDiv': vm.currentPage === vm.qdePaginacao.length}">
-        <a class="page-link" ng-click="vm.avancarPaginanacao()">Próximo</a>
-      </li>
-    </ul>
-  </nav>
 </div>

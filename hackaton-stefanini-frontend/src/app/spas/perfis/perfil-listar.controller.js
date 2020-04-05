@@ -1,27 +1,23 @@
-angular.module("hackaton-stefanini").controller("PerfilsListarController", PerfilsListarController);
-PerfilsListarController.$inject = ["$rootScope", "$scope", "$location",
+angular.module("hackaton-stefanini").controller("PerfilListarController", PerfilListarController);
+PerfilListarController.$inject = ["$rootScope", "$scope", "$location",
   "$q", '$filter', '$routeParams', 'HackatonStefaniniService'];
 
 
 
-function PerfilsListarController($rootScope, $scope, $location,
+function PerfilListarController($rootScope, $scope, $location,
   $q, $filter, $routeParams, HackatonStefaniniService) {
   vm = this;
 
 
-  vm.qdePorPagina = 5;
-  vm.ultimoIndex = 0;
-  vm.contador = 0;
-
-  vm.urlPerfil = "http://localhost:8080/treinamento/api/perfils/";
+  vm.urlPerfil = "http://localhost:8080/treinamento/api/perfis/";
 
   vm.init = function () {
 
     HackatonStefaniniService.listar(vm.urlPerfil).then(
-      function (responsePerfils) {
-        if (responsePerfils.data !== undefined)
+      function (responsePerfis) {
+        if (responsePerfis.data !== undefined)
 
-          vm.listaPerfis = responsePerfils.data;
+          vm.listaPerfis = responsePerfis.data;
 
       })
   };

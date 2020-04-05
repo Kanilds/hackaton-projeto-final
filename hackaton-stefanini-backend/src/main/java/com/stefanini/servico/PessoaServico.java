@@ -71,6 +71,7 @@ public class PessoaServico implements Serializable {
         Pessoa pessoaSalva = pessoaDao.salvar(pessoa);
         pessoaDao.daoFlush();
 
+
         for (Endereco enderecoSalvo : enderecos) {
             enderecoSalvo.setIdPessoa(pessoaSalva.getId());
             enderecoServico.salvar(enderecoSalvo);

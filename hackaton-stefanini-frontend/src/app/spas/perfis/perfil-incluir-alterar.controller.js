@@ -1,5 +1,5 @@
-angular.module("hackaton-stefanini").controller("PerfilsIncluirAlterarController", PerfilsIncluirAlterarController);
-PerfilsIncluirAlterarController.$inject = [
+angular.module("hackaton-stefanini").controller("PerfilIncluirAlterarController", PerfilIncluirAlterarController);
+PerfilIncluirAlterarController.$inject = [
     "$rootScope",
     "$scope",
     "$location",
@@ -8,7 +8,7 @@ PerfilsIncluirAlterarController.$inject = [
     "$routeParams",
     "HackatonStefaniniService"];
 
-function PerfilsIncluirAlterarController(
+function PerfilIncluirAlterarController(
     $rootScope,
     $scope,
     $location,
@@ -32,7 +32,7 @@ function PerfilsIncluirAlterarController(
         dataHoraAlteracao: ""
     }
 
-    vm.urlPerfil = "http://localhost:8080/treinamento/api/perfils/";
+    vm.urlPerfil = "http://localhost:8080/treinamento/api/perfis/";
     vm.urlPessoa = "http://localhost:8080/treinamento/api/pessoas/";
 
     /**METODOS DE INICIALIZACAO */

@@ -128,7 +128,6 @@ function PessoaIncluirAlterarController(
             vm.enderecoModal = endereco;
 
         if (vm.pessoa.enderecos.length === 0)
-            
             vm.pessoa.enderecos.push(vm.enderecoModal);
 
         $("#modalEndereco").modal();
@@ -163,6 +162,7 @@ function PessoaIncluirAlterarController(
         });
 
         objetoDados.enderecos = listaEndereco;
+        objetoDados.perfils = vm.perfil;
         if (vm.perfil !== null){
             debugger
             vm.isNovoPerfil = true;
