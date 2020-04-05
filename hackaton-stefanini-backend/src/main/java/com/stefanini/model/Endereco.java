@@ -40,14 +40,10 @@ public class Endereco implements Serializable {
     private String logradouro;
     /**
      * Unidirecional
-     * Somente Pessoa acessa endereco
+     * Somente Pessoa acessa endereco//
      */
     @Column(name = "CO_SEQ_PESSOA")
     private Long idPessoa;
-
-//    @ManyToOne
-//    @JoinColumn(name = "co_seq_pessoa", referencedColumnName = "co_seq_pessoa", nullable = false)
-//    private Pessoa pessoa;
 
 
     public Endereco() {
